@@ -19,11 +19,11 @@
 </head>
 
 <body>
- 
+
     <section class="contactdone ">
         <div class="mydatacontent">
             <h2>Contact Us</h2>
-        
+
         </div>
         <div class="datacontainer">
             <div class="contactinfo">
@@ -50,9 +50,9 @@
                         <p style="font-size: 12px;">ammritfood@gmail.com</p>
                     </div>
                 </div>
-            </div>                                 
+            </div>
             <div class="contactformdata">
-                <form >
+                <form>
                     <h2>Send Message</h2>
                     <div class="inputbox">
                         <input type="text" name="" id="formGroupExampleInput" required>
@@ -71,34 +71,38 @@
                         <span>Message</span>
                     </div>
                     <div class="inputbox">
-                        <input type="button" name="" id="" value="Submit" >
+                        <input type="button" name="" id="" value="Submit" onclick="mynewfun()">
 
                     </div>
                 </form>
             </div>
         </div>
-</section>
-<br>
-<!-- enquiry pulse -->
-<div class="centerwala">
+    </section>
+    <br>
+
+    <!-- enquiry pulse -->
+    <!-- <div class="centerwala">
     <a href="tel:9654092016"> <img src="images/enqu.png" alt="" class="pulsewala"> </a>
-</div>
-<!-- whatsapp enquiry -->
-<div class="centerwalatwo">
+</div> -->
+    <!-- whatsapp enquiry -->
+    <!-- <div class="centerwalatwo">
     <a href="https://wa.me/919654092016"> <img src="images/finalwhatsap.png " alt="Shiva photocopy rdc" class="pulsewalatwo"></a>
-</div>
-<!-- script for form -->
-<script>
-    console.log('hello');
-    function mynewfun() {
-      var nam = document.getElementById('formGroupExampleInput').value; 
-      var emaildata = document.getElementById('formGroupExampleInput2').value;
-      var phon = document.getElementById('formGroupExampleInput3').value;
-      var msg = document.getElementById('formGroupExampleInput4').value;
-      var result = 'http://aavyainfratech.herokuapp.com/sendmail?nam=' + nam + '&emaildata=' + emaildata + '&phon=' + phon + '&msg=' + msg;
-      window.location.href = result;
-   }
-  </script>
+</div> -->
+    <!-- script for form -->
+    <script>
+        function mynewfun() {
+            var nam = document.getElementById('formGroupExampleInput').value;
+            var emaildata = document.getElementById('formGroupExampleInput2').value;
+            var phon = document.getElementById('formGroupExampleInput3').value;
+            var msg = document.getElementById('formGroupExampleInput4').value;
+            //   var result = 'http://slanzmails.herokuapp.com//sendmail?gmailId=' + 'agranshkri@gmail.com' + '&data=<h1>Name</h1>&rdurl=https://google.com';
+            var result = `http://slanzmails.herokuapp.com/sendmail?gmailId=agranshukri@gmail.com&data=<p style="color:green;font-size:15px;font-weight:800;">Hii AmmritFood!! You have new enquiry</p><h1>Name : ${nam}</h1> <h1>Email :${emaildata}</h1> <h1>Phone :${phon}</h1> <h1>Message :${msg}</h1> &rdurl=https://agranshupy.github.io/amritfoodtesting/querydone.html`;
+            window.location.href = result;
+            console.log('testing');
+
+
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
